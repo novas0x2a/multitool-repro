@@ -1,0 +1,9 @@
+genrule(
+    name = "version",
+    srcs = [],
+    outs = ["version.txt"],
+    cmd = "$(location @multitool//tools/ruff) version > \"$@\"",
+    tools = [
+        "@multitool//tools/ruff",
+    ],
+)
